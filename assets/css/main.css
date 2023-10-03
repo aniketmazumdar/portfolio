@@ -259,7 +259,7 @@ body {
 }
 
 .content-wrapper .wrapper {
-    font-family: var(--font-gill);
+    font-family: var(--font-kalam);
 }
 
 /* Desktop -> Mobile */
@@ -439,7 +439,6 @@ body {
 /* ------------------------------------------------------------------ */
 .summary .highlight {
     font-weight: bold;
-    font-style: italic;
 }
 
 .summary .heading {
