@@ -10,6 +10,11 @@
 */
 
 :root {
+    --font-audiowide: "Audiowide", sans-serif;
+    --font-electrolize: "Electrolize", sans-serif;
+    --font-mooli: "Mooli", sans-serif;
+    --font-monospace: monospace;
+
 
     --color-navy: #005;
     --color-maroon: #500;
@@ -21,11 +26,6 @@
     --color-grey-dark-2: #666;
     --color-grey-light: #DDD;
     --color-grey-light-2: #AAA;
-
-
-    --font-audiowide: "Audiowide", sans-serif;
-    --font-electrolize: "Electrolize", sans-serif;
-    --font-mooli: "Mooli", sans-serif;
 
 
     --text-xxxs: 1rem;
@@ -97,6 +97,9 @@
     --box-shadow-transition: box-shadow 1s ease;
 
 
+    --content-text-font: var(--font-audiowide);
+    --content-title-font: var(--font-audiowide);
+    --copyright-text-font: var(--font-monospace);
 }
 
 html {
@@ -631,4 +634,13 @@ body {
 
 .get-in-touch address {
     font-style: normal;
+}
+
+.get-in-touch .row:nth-child(3) {
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--copyright-text-font);
 }
