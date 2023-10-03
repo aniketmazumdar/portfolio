@@ -14,6 +14,9 @@
     --font-electrolize: "Electrolize", sans-serif;
     --font-mooli: "Mooli", sans-serif;
     --font-monospace: monospace;
+    --font-fantasy: fantasy;
+    --font-kalam: 'Kalam', cursive;
+    --font-gill: 'Gill Sans';
 
 
     --color-navy: #005;
@@ -236,7 +239,8 @@ body {
     margin-bottom: 4rem;
 }
 
-.content-wrapper>div:nth-child(2n+1) {
+.content-wrapper>div:nth-child(2n+1),
+.content-wrapper>div:nth-child(2n+1) a {
     color: var(--content-text-dark-color);
 }
 
@@ -244,13 +248,18 @@ body {
     color: var(--content-title-dark-color);
 }
 
-.content-wrapper>div:nth-child(2n) {
+.content-wrapper>div:nth-child(2n),
+.content-wrapper>div:nth-child(2n) a {
     background-color: var(--theme-color);
     color: var(--content-text-light-color);
 }
 
 .content-wrapper>div:nth-child(2n) .title {
     color: var(--content-title-light-color);
+}
+
+.content-wrapper .wrapper {
+    font-family: var(--font-gill);
 }
 
 /* Desktop -> Mobile */
@@ -301,6 +310,10 @@ body {
     display: flex;
     align-items: center;
     flex: 1;
+}
+
+.introduction .wrapper {
+    font-family: var(--font-audiowide);
 }
 
 .introduction .hello-wrap {
@@ -422,6 +435,28 @@ body {
 
 
 /* ------------------------------------------------------------------ */
+/*                              SUMMARY                               */
+/* ------------------------------------------------------------------ */
+.summary .highlight {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.summary .heading {
+    font-weight: bold;
+}
+
+.summary ul.summary-items > li {
+    margin-bottom: 1.5rem;
+}
+
+.summary ul.summary-items ul.expertise-items > li{
+    list-style: inside;
+}
+
+
+
+/* ------------------------------------------------------------------ */
 /*                              SERVICES                              */
 /* ------------------------------------------------------------------ */
 
@@ -528,10 +563,6 @@ body {
     transition: var(--text-shadow-transition);
 }
 
-.experience .brand a {
-    color: var(--content-text-light-color);
-}
-
 /* Extra large -> Tab */
 .experience .designation {
     font-size: var(--text-xxs);
@@ -582,10 +613,6 @@ body {
 .education .university:hover {
     text-shadow: var(--dark-text-shadow);
     transition: var(--text-shadow-transition);
-}
-
-.education .university a {
-    color: var(--content-text-dark-color);
 }
 
 /* Extra large -> Tablet */
@@ -644,7 +671,6 @@ body {
     align-items: center;
     line-height: var(--lineHeight-xs);
     margin-bottom: 1.5rem;
-    color: var(--content-text-light-color);
     width: fit-content;
     transition: var(--text-shadow-transition);
 }
