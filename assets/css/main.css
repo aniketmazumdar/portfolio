@@ -26,6 +26,7 @@
     --color-grey-dark-2: #666;
     --color-grey-light: #DDD;
     --color-grey-light-2: #AAA;
+    --color-grey-light-3: #EEE;
 
 
     --text-xxxs: 1rem;
@@ -302,6 +303,28 @@ body {
     flex: 1;
 }
 
+.introduction .hello-wrap {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+/* Extra Large -> Laptop */
+.introduction .img-wrap {
+    background: var(--color-grey-light-3);
+    border-radius: 1.5rem;
+    height: 12.5rem;
+    overflow: hidden;
+}
+
+/* Extra Large -> Laptop */
+.introduction .img-wrap img.avatar {
+    height: 12.5rem;
+    border-radius: 1.5rem;
+    top: 1.25rem;
+    position: relative;
+}
+
 /* Extra Large -> Laptop */
 .introduction .hello {
     font-weight: lighter;
@@ -351,6 +374,11 @@ body {
         font-size: var(--text-xl);
     }
 
+    .introduction .img-wrap img.avatar,
+    .introduction .img-wrap {
+        height: 8.5rem;
+    }
+
     .introduction .name {
         font-size: var(--title-m);
         line-height: var(--lineHeight-xxl);
@@ -366,6 +394,15 @@ body {
 @media screen and (max-device-width: 480px) {
     .introduction .hello {
         font-size: var(--text-s);
+    }
+
+    .introduction .img-wrap {
+        height: 6rem;
+    }
+
+    .introduction .img-wrap img.avatar {
+        height: 6rem;
+        top: 0.5rem;
     }
 
     .introduction .name {
@@ -641,6 +678,6 @@ body {
     position: absolute;
     width: inherit;
     text-align: center;
-    font-size: 1rem;
+    font-size: var(--text-xxxs);
     font-family: var(--copyright-text-font);
 }
