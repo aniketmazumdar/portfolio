@@ -43,7 +43,9 @@
     --text-xxxl: 3rem;
     --title-s: 3rem;
     --title-m: 4rem;
-    --title-l: 6rem;
+    --title-l: 5rem;
+    --title-xl: 6rem;
+    --title-xxl: 8rem;
 
 
     --lineHeight-xxs: 1.5rem;
@@ -117,18 +119,26 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+li,
+p {
     margin: 0;
     padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-audiowide);
+}
+
 
 .wrapper {
     width: -webkit-fill-available;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
 }
 
 ul li {
@@ -139,8 +149,57 @@ a {
     text-decoration: none;
 }
 
+.progress {
+    overflow: hidden;
+    height: 1.25rem;
+    background-color: var(--color-grey-light);
+    border-radius: 2rem;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    color: var(--content-text-light-color);
+    text-align: center;
+    background-color: var(--color-grey-dark);
+    font-size: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile */
+@media screen and (max-device-width: 480px) {
+    .progress {
+        overflow: hidden;
+        height: 1rem;
+        background-color: var(--color-grey-light);
+        border-radius: 2rem;
+    }
+
+    .progress-bar {
+        font-size: .5rem;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    width: fit-content;
     font-family: var(--font-audiowide);
     font-size: var(--text-xxxs);
     font-weight: bold;
@@ -173,10 +232,8 @@ a {
 /* ----------------------------------------------------------- */
 /*                              BODY                           */
 /* ----------------------------------------------------------- */
-
 /* Extra large -> Laptop */
 body {
-    font-family: var(--font-audiowide);
     margin: 0;
     font-size: var(--text-xs);
     line-height: var(--lineHeight-m);
@@ -205,7 +262,6 @@ body {
 /* ------------------------------------------------------------- */
 /*                              SIDEBAR                          */
 /* ------------------------------------------------------------- */
-
 /* Extra large */
 .sidebar {
     position: fixed;
@@ -222,11 +278,6 @@ body {
     min-width: 15rem;
 }
 
-.sidebar ul li {
-    font-size: var(--text-s);
-    line-height: var(--lineHeight-xl);
-}
-
 .sidebar ul li a {
     color: var(--sidebar-text-color);
     transition: var(--text-shadow-transition);
@@ -235,6 +286,11 @@ body {
 .sidebar ul li a:hover {
     text-shadow: var(--light-text-shadow);
     transition: var(--text-shadow-transition);
+}
+
+.sidebar ul li .sidebar-item {
+    font-size: var(--text-s);
+    line-height: var(--lineHeight-xl);
 }
 
 /* Desktop -> Mobile */
@@ -264,6 +320,7 @@ body {
 
 /* Extra large -> Desktop */
 .content-wrapper .title {
+    font-family: var(--font-audiowide);
     font-size: var(--title-s);
     font-weight: bold;
     margin-bottom: 4rem;
@@ -364,10 +421,6 @@ body {
     flex: 1;
 }
 
-.welcome .wrapper {
-    font-family: var(--font-audiowide);
-}
-
 .welcome .hello-wrap {
     display: flex;
     align-items: baseline;
@@ -399,7 +452,7 @@ body {
 /* Extra Large -> Laptop */
 .welcome .name {
     color: var(--content-title-dark-color);
-    font-size: var(--title-l);
+    font-size: var(--title-xl);
     line-height: var(--lineHeight-xxxl);
     margin: 8rem 0 6rem 0;
     text-shadow: var(--dark-text-shadow);
@@ -489,24 +542,29 @@ body {
 /* ------------------------------------------------------------------ */
 /*                              SUMMARY                               */
 /* ------------------------------------------------------------------ */
+.summary p {
+    margin-bottom: 2rem;
+}
+
 .summary .highlight {
     font-weight: bold;
 }
 
-.summary .heading {
-    font-weight: bold;
-}
-
-.summary ul.summary-items>li {
-    margin-bottom: 1.5rem;
-}
-
-.summary ul.summary-items ul.expertise-items>li {
-    list-style: inside;
+.summary a .highlight {
+    text-decoration: underline;
 }
 
 .summary .cv-wrap {
     text-align: right;
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+}
+
+.summary .cv-wrap svg {
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    margin-left: -0.5rem;
 }
 
 
@@ -514,86 +572,61 @@ body {
 /* ------------------------------------------------------------------ */
 /*                              SERVICES                              */
 /* ------------------------------------------------------------------ */
-
-
-
-
-/* ------------------------------------------------------------------ */
-/*                              SKILLS                                */
-/* ------------------------------------------------------------------ */
-.skills .summary {
-    margin-bottom: 3rem;
-}
-
-.skills ul {
+.services .service-items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-.skills ul li {
+.services ul li {
     background-color: var(--color-grey-light);
     text-align: center;
-    padding: 2rem 0;
+    padding: 1.25rem;
     border-radius: 1rem;
     cursor: pointer;
     transition: var(--box-shadow-transition);
+    color: var(--color-grey-dark);
 }
 
-.skills ul li:hover {
+.services ul li:hover {
     box-shadow: var(--dark-box-shadow);
     transition: var(--box-shadow-transition);
 }
 
 /* Extra large -> Tab */
-.skills ul li img {
-    width: 5rem;
+.services ul li img {
+    width: 3rem;
 }
 
-/* Extra large -> Laptop */
-.skills ul li .language {
-    font-size: var(--text-xxs);
-    text-shadow: none;
-    color: var(--content-title-dark-color);
+.services ul li svg {
+    height: 4rem;
 }
 
-.skills ul li .language,
-.skills ul li .duration {
-    margin: 0;
+.services ul li .heading {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
-/* Laptop -> Mobile */
+.services ul li .caption {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 1rem 0 0;
+}
+
+/* Laptop */
 @media screen and (max-device-width: 1024px) {
-    .skills ul {
-        gap: 2rem;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Tablet -> Mobile */
-@media screen and (max-device-width: 768px) {
-    .skills ul {
-        gap: 2rem;
+    .services .service-items {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .skills ul li .language {
-        display: none;
-    }
-
-    .skills ul li .duration {
-        font-size: var(--text-xxs);
+        gap: 2rem;
     }
 }
 
-/* Mobile */
-@media screen and (max-device-width: 480px) {
-    .skills ul li img {
-        width: 3.5rem;
-    }
-
-    .skills ul li .duration {
-        font-size: var(--text-xxxs);
+/* Tablet */
+@media screen and (max-device-width: 768px) {
+    .services .service-items {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -621,7 +654,7 @@ body {
 /* Extra large -> Tab */
 .experience .designation {
     font-size: var(--text-xxs);
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .experience .duration {
@@ -648,6 +681,70 @@ body {
         font-size: var(--text-xxxs);
     }
 }
+
+
+/* ------------------------------------------------------------------ */
+/*                              SKILLS                                */
+/* ------------------------------------------------------------------ */
+.skills .skill-content {
+    margin-bottom: 1.5rem;
+}
+
+.skills .category {
+    margin: 2rem 0 0.5rem 0;
+}
+
+.skills .skill-categories .skill-wrap {
+    display: grid;
+    grid-template-columns: 20% 3% calc(77% - 2rem);
+    gap: 1rem;
+    align-items: center;
+}
+
+.skills .skill-wrap h4 {
+    font-size: 1.25rem;
+    text-align: end;
+    font-family: var(--font-kalam);
+}
+
+
+.skills .skill-wrap img {
+    height: 1.25rem;
+}
+
+/* Tablet */
+@media screen and (max-device-width: 768px) {
+    .skills .skill-categories .skill-wrap {
+        grid-template-columns: 5% calc(95% - 1rem);
+        margin: 1rem 0;
+    }
+
+    .skills .skill-wrap h4 {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media screen and (max-device-width: 480px) {
+    .skills .skill-wrap img {
+        height: 1rem;
+    }
+
+    .skills .skill-content {
+        margin-bottom: -1rem;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------ */
+/*                              PROJECTS                              */
+/* ------------------------------------------------------------------ */
+
+
+
+
 
 
 
@@ -713,9 +810,35 @@ body {
 
 
 
+/* ------------------------------------------------------------------ */
+/*                          CERTIFICATES                              */
+/* ------------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------------ */
+/*                             ABOUT ME                               */
+/* ------------------------------------------------------------------ */
+.about-me p {
+    margin-bottom: 2rem;
+}
+
+
+
 /* ------------------------------------------------------------ */
 /*                          GET IN TOUCH                        */
 /* ------------------------------------------------------------ */
+.get-in-touch {
+    display: flex;
+    align-items: center;
+}
+
+.get-in-touch .big-thank-you {
+    margin: 2rem 0 3rem;
+    font-size: var(--title-xl);
+}
+
 .get-in-touch li a {
     display: flex;
     align-items: center;
@@ -793,8 +916,17 @@ body {
 
 /* Laptop */
 @media screen and (max-device-width: 1024px) {
+    .get-in-touch .big-thank-you {
+        /* margin: 2rem 0 3rem; */
+        font-size: var(--title-l);
+    }
+
     .get-in-touch .contacts svg {
         height: 1.25rem;
+    }
+
+    .get-in-touch ul.social-networks {
+        margin: 3rem 0 1rem 0;
     }
 
     .get-in-touch .wrapper ul.social-networks a {
@@ -809,6 +941,11 @@ body {
 
 /* Tablet */
 @media screen and (max-device-width: 768px) {
+    .get-in-touch .big-thank-you {
+        margin: 2rem 0;
+        font-size: var(--title-m);
+    }
+
     .get-in-touch ul.social-networks {
         margin: 4rem 0 2rem 0;
     }
@@ -821,6 +958,11 @@ body {
 
 /* Mobile */
 @media screen and (max-device-width: 480px) {
+    .get-in-touch .big-thank-you {
+        margin: 2rem 0;
+        font-size: var(--title-s);
+    }
+
     .get-in-touch ul.contacts li {
         margin-bottom: 0.5rem;
     }
