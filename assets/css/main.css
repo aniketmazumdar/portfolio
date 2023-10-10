@@ -162,7 +162,7 @@ a {
 .progress-bar {
     width: 0;
     height: 100%;
-    color: var(--color-theme);
+    color: var(--theme-color);
     text-align: center;
     background-color: var(--content-text-light-color);
     font-size: var(--progress-text-m);
@@ -373,7 +373,7 @@ body {
 }
 
 .content-wrapper .wrapper .btn-dark {
-    background-color: var(--color-theme);
+    background-color: var(--theme-color);
     color: var(--color-white);
     transition: var(--box-shadow-transition);
 }
@@ -562,9 +562,9 @@ body {
     font-weight: bold;
 }
 
-.summary a .highlight {
+/* .summary a .highlight {
     text-decoration: underline;
-}
+} */
 
 .summary .cv-wrap {
     text-align: right;
