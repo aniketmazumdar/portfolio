@@ -11,17 +11,12 @@
 
 :root {
     --font-audiowide: "Audiowide", sans-serif;
-    --font-electrolize: "Electrolize", sans-serif;
-    --font-mooli: "Mooli", sans-serif;
     --font-monospace: monospace;
-    --font-fantasy: fantasy;
     --font-kalam: 'Kalam', cursive;
-    --font-gill: 'Gill Sans';
 
 
     --color-navy: #005;
     --color-maroon: #500;
-    --color-green-light: #040;
     --color-green-white: #055;
     --color-white: #FFF;
     --color-black: #000;
@@ -136,11 +131,17 @@ h4,
 h5,
 h6 {
     font-family: var(--font-audiowide);
+    display: flex;
+    align-items: center;
 }
 
 
 .wrapper {
     width: -webkit-fill-available;
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 ul li {
@@ -161,7 +162,7 @@ a {
 .progress-bar {
     width: 0;
     height: 100%;
-    color: var(--color-navy);
+    color: var(--color-theme);
     text-align: center;
     background-color: var(--content-text-light-color);
     font-size: var(--progress-text-m);
@@ -294,7 +295,7 @@ body {
     align-items: center;
 }
 
-.sidebar ul li .sidebar-item svg{
+.sidebar ul li .sidebar-item svg {
     height: 1.25rem;
     fill: var(--content-text-light-color);
     margin-right: 0.5rem
@@ -648,6 +649,14 @@ body {
 /* ------------------------------------------------------------------ */
 .experience ul li {
     margin: 1.25rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.experience ul li img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
 }
 
 /* Extra large -> Laptop */
@@ -679,6 +688,10 @@ body {
 @media screen and (max-device-width: 768px) {
     .experience .brand {
         font-size: var(--text-s);
+    }
+
+    .experience ul li img {
+        display: none;
     }
 }
 
@@ -789,9 +802,28 @@ body {
 /* ------------------------------------------------------------------ */
 /*                              PROJECTS                              */
 /* ------------------------------------------------------------------ */
+.projects ul li {
+    margin-bottom: 3rem;
+}
 
+.projects .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
 
+/* .projects .heading .duration{
+    font-size: 1.25rem;
+} */
 
+.projects .title {
+    font-size: 2rem;
+}
+
+.projects .technologies {
+    margin-top: 1.25rem;
+}
 
 
 
@@ -956,9 +988,12 @@ body {
 /* ------------------------------------------------------------ */
 /*                          GET IN TOUCH                        */
 /* ------------------------------------------------------------ */
-.get-in-touch {
-    display: flex;
-    align-items: center;
+div.get-in-touch {
+    padding-bottom: 0;
+}
+
+div.get-in-touch .wrapper {
+    min-height: calc(100vh - 3rem);
 }
 
 .get-in-touch .big-thank-you {
@@ -975,7 +1010,7 @@ body {
 }
 
 .get-in-touch ul.contacts {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .get-in-touch ul.contacts li {
@@ -1001,10 +1036,17 @@ body {
     font-style: normal;
 }
 
+.get-in-touch .social-networks-wrap {
+    /* margin: 5rem 0 2rem 0; */
+    display: flex;
+    justify-content: center;
+}
+
 .get-in-touch ul.social-networks {
-    margin: 5rem 0 2rem 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    width: fit-content;
 }
 
 .get-in-touch ul.social-networks li {
@@ -1019,8 +1061,8 @@ body {
 
 .get-in-touch ul.social-networks svg {
     fill: var(--theme-color);
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
     scale: .7;
 }
 
@@ -1033,8 +1075,8 @@ body {
 }
 
 .get-in-touch .copyright-text {
-    bottom: 0;
-    position: absolute;
+    /* bottom: 0;
+    position: absolute; */
     width: inherit;
     text-align: center;
     font-size: var(--text-xxxs);
@@ -1053,7 +1095,7 @@ body {
     }
 
     .get-in-touch ul.social-networks {
-        margin: 3rem 0 1rem 0;
+        /* margin: 3rem 0 1rem 0; */
     }
 
     .get-in-touch .wrapper ul.social-networks a {
@@ -1074,7 +1116,8 @@ body {
     }
 
     .get-in-touch ul.social-networks {
-        margin: 4rem 0 2rem 0;
+        /* margin: 4rem 0 2rem 0; */
+        gap: 1.5rem;
     }
 
     .get-in-touch ul.social-networks svg {
@@ -1095,7 +1138,8 @@ body {
     }
 
     .get-in-touch ul.social-networks {
-        margin: 3rem 0 2rem 0;
+        /* margin: 3rem 0 2rem 0; */
+        gap: 1rem;
     }
 
     .get-in-touch ul.social-networks svg {

@@ -1,0 +1,4 @@
+To do
+-----------------------------
+Title, Caption, Text size should be fixed.
+use constant for padding, margin, height, width.
