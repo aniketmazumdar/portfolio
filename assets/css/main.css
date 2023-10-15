@@ -365,13 +365,14 @@ h6 {
     font-family: var(--SUBTITLE-FONTSTYLE);
     font-size: var(--SUBTITLE-FONTSIZE);
     line-height: var(--SUBTITLE-LINEHEIGHT);
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 .caption {
     font-family: var(--CAPTION-FONTSTYLE);
     font-size: var(--CAPTION-FONTSIZE);
     line-height: var(--CAPTION-LINEHEIGHT);
+    font-weight: lighter;
 }
 
 
@@ -823,7 +824,6 @@ body {
 }
 
 #experience .designation {
-    font-weight: lighter;
     margin-top: 0.5rem;
 }
 
@@ -876,13 +876,8 @@ body {
     margin-top: 0.5rem;
 }
 
-#education .degree {
-    font-weight: lighter;
-}
-
 #education .university {
     transition: var(--CONTENT-SHADOW-TRANSITION);
-    font-weight: lighter;
     margin-top: 1rem;
 }
 
@@ -892,7 +887,6 @@ body {
 }
 
 #education .score {
-    font-weight: bold;
     margin-top: 1rem;
 }
 
@@ -915,19 +909,23 @@ body {
     margin-top: 4rem;
 }
 
-#certificates li .issuer {
+#certificates .caption {
+    font-weight: bold;
+}
+
+#certificates .issuer {
     margin-top: 0.25rem;
 }
 
 /* Extra large -> Desktop */
-.certificate-groups {
+#certificates .certificate-groups {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
     row-gap: 2rem;
 }
 
-.certificate-groups li img {
+#certificates .certificate-groups img {
     max-width: 100%;
     height: auto;
     border-radius: 0.5rem;
@@ -936,14 +934,14 @@ body {
 
 /* Laptop */
 @media screen and (max-device-width: 1024px) {
-    .certificate-groups {
+    #certificates .certificate-groups {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Mobile */
 @media screen and (max-device-width: 480px) {
-    .certificate-groups {
+    #certificates .certificate-groups {
         grid-template-columns: repeat(1, 1fr);
     }
 }
