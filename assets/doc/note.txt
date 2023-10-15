@@ -1,4 +1,13 @@
 To do
 -----------------------------
-Title, Caption, Text size should be fixed.
-use constant for padding, margin, height, width.
+Tab implement for:
+    SKILLS, 
+    PROJECT (based on skills - React JS, Angular, JS, Node, PHP)
+    CERTIFICATES (based on RECOGNITION, COURSES)
+    ABOUT ME (based on Home & Family, CAREER, LANGUAGES, CHARACTER, HOBBIES)
+
+
+Modal implement for Certificate image in zoom
+
+New Section: GALLERY (PHOTO)
+New Section: TESTIMONIAL
