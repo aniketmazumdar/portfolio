@@ -1,13 +1,4 @@
 To do
 -----------------------------
-Tab implement for:
-    SKILLS, 
-    PROJECT (based on skills - React JS, Angular, JS, Node, PHP)
-    CERTIFICATES (based on RECOGNITION, COURSES)
-    ABOUT ME (based on Home & Family, CAREER, LANGUAGES, CHARACTER, HOBBIES)
-
-
-Modal implement for Certificate image in zoom
-
 New Section: GALLERY (PHOTO)
 New Section: TESTIMONIAL

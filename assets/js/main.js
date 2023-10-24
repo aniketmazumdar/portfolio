@@ -22,7 +22,7 @@ allSkillAccordTitles.forEach(accord => {
         accP.style.maxHeight = null;
       }
     });
-    
+
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
@@ -104,5 +104,35 @@ allTabBtns[0].click();
 
 
 
+/* ------------------------------------------------------------------ */
+/*                          MODAL                              */
+/* ------------------------------------------------------------------ */
+
+// Modal Container
+const modal = document.querySelector(".modal");
+
+// Modal Content Image
+const modalContentImg = document.querySelector(".modal-content-img");
+
+// All Image elements of the portfolio
+const allImgs = document.querySelectorAll("img");
+allImgs.forEach(img => {
+  // Click event for any image
+  img.onclick = function () {
+    modal.style.display = "flex";
+    modalContentImg.src = this.src;
+  }
+});
 
 
+// Modal close icon
+const modalCloseIcon = document.querySelector(".close");
+
+// Click event for close icon
+modalCloseIcon.onclick = function () {
+  modal.style.animation = "zoomOut 0.5s ease"
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.style.animation = ""
+  }, 500);
+}
