@@ -309,7 +309,7 @@ a {
     touch-action: manipulation;
     cursor: pointer;
     background-image: none;
-    padding: 1rem;
+    padding: 1rem 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -998,7 +998,7 @@ body {
 /*                          CERTIFICATES                              */
 /* ------------------------------------------------------------------ */
 #certificates .tab-btn-groups {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
 }
 
 #certificates .tab-content-certificate {
@@ -1053,36 +1053,16 @@ body {
     #certificates .certificate-groups {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    #certificates .tab-btn-groups svg {
+        display: none;
+    }
 }
 
 /* Only for XS */
 @media screen and (max-device-width: 480px) {
     #certificates .certificate-groups {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    #certificates .tab-btn-groups {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #certificates .tab-btn-dark {
-        background-color: var(--THEME-COLOR);
-        color: var(--LIGHT-CONTENT-COLOR);
-        border-top: 1px solid var(--LIGHT-CONTENT-COLOR);
-        border-bottom: 1px solid var(--LIGHT-CONTENT-COLOR);
-        border-left: 1px solid var(--LIGHT-CONTENT-COLOR);
-        border-right: 1px solid var(--LIGHT-CONTENT-COLOR);
-    }
-
-    #certificates .tab-btn-dark.active,
-    #certificates .tab-btn-dark:hover,
-    #certificates .tab-btn-dark:focus {
-        background-color: var(--THEME-COLOR);
-        color: var(--LIGHT-CONTENT-COLOR);
-        border-top: 1px solid var(--LIGHT-CONTENT-COLOR);
-        border-bottom: 1px solid var(--LIGHT-CONTENT-COLOR);
-        border-left: 1px solid var(--LIGHT-CONTENT-COLOR);
-        border-right: 1px solid var(--THEME-COLOR);
     }
 }
 
