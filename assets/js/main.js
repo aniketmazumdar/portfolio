@@ -1,75 +1,101 @@
 /* ------------------------------------------------------------------ */
-/*                              SKILLS                                */
+/*                               MODAL                                */
 /* ------------------------------------------------------------------ */
-// Accordian Title
-const allSkillAccordTitles = document.querySelectorAll(`#skills .accordion-title`);
+// Modal Container
+const modal = document.querySelector(".modal");
 
-// Accordian Panel
-const allSkillAccordPanels = document.querySelectorAll(`#skills .accordion-panel`);
+// Modal Content Image
+const modalContentImg = document.querySelector(".modal-content-img");
 
-allSkillAccordTitles.forEach(accord => {
-  accord.addEventListener("click", function () {
-    allSkillAccordTitles.forEach(accT => {
-      if (accT !== this) {
-        accT.classList.remove('active')
-      }
-    });
-    this.classList.toggle("active");
-
-    let panel = this.nextElementSibling;
-    allSkillAccordPanels.forEach(accP => {
-      if (accP !== panel) {
-        accP.style.maxHeight = null;
-      }
-    });
-
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
+// All Image elements of the portfolio
+const allImgs = document.querySelectorAll("img");
+allImgs.forEach(img => {
+  // Click event for any image
+  img.onclick = function () {
+    modal.style.display = "flex";
+    modalContentImg.src = this.src;
+  }
 });
 
-// By default first accordian click
-allSkillAccordTitles[0].click();
+// Modal close icon
+const modalCloseIcon = document.querySelector(".close");
+
+// Click event for close icon
+modalCloseIcon.onclick = function () {
+  modal.style.animation = "zoomOut 0.5s ease"
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.style.animation = ""
+  }, 500);
+}
+
+
+
+/* ----------------------------------------------------------- */
+/*                           ACCORDION                         */
+/* ----------------------------------------------------------- */
+const accordionClickHandler = (accordianEl, atPageLoad = false) => {
+  // fetch Section ID
+  const sectionId = accordianEl.closest('section').id;
+
+  // All Accordion Container
+  const allAccords = document.querySelectorAll(`#${sectionId} .accordion`);
+
+  // All Accordion Panel
+  const allAccordPanels = document.querySelectorAll(`#${sectionId} .accordion-panel`);
+
+  allAccords.forEach(acc => {
+    if (acc !== accordianEl) {
+      acc.classList.remove('active');
+    }
+  });
+  accordianEl.classList.toggle("active");
+
+  const selectedAccPanel = accordianEl.querySelector(".accordion-panel");
+  allAccordPanels.forEach(accP => {
+    if (accP !== selectedAccPanel) {
+      accP.style.maxHeight = null;
+    }
+  });
+  if (selectedAccPanel.style.maxHeight) {
+    selectedAccPanel.style.maxHeight = null;
+  } else {
+    selectedAccPanel.style.maxHeight = selectedAccPanel.scrollHeight + "px";
+  }
+
+  // Fix page scroll position at active accordion
+  if (!atPageLoad) {
+    setTimeout(() => {
+      // Calculate the top position of the header element relative to the document
+      const headerTop = accordianEl.getBoundingClientRect().top + window.scrollY - 48;
+
+      // Scroll to the header's top position
+      window.scrollTo({
+        top: headerTop,
+        behavior: 'smooth'
+      });
+    }, 500);
+  }
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/*                              SKILLS                                */
+/* ------------------------------------------------------------------ */
+// All Skill Accordions
+const allSkillAccords = document.querySelectorAll(`#skills .accordion`);
+accordionClickHandler(allSkillAccords[0], true);
 
 
 
 /* ------------------------------------------------------------------ */
 /*                              PROJECTS                              */
 /* ------------------------------------------------------------------ */
-// Accordian Title
-const allProjectAccordTitles = document.querySelectorAll(`#projects .accordion-title`);
+// All Project Accordion Container
+const allProjectAccords = document.querySelectorAll(`#projects .accordion`);
+accordionClickHandler(allProjectAccords[0], true);
 
-// Accordian Panel
-const allProjectAccordPanels = document.querySelectorAll(`#projects .accordion-panel`);
-
-allProjectAccordTitles.forEach(accord => {
-  accord.addEventListener("click", function () {
-    allProjectAccordTitles.forEach(accT => {
-      if (accT !== this) {
-        accT.classList.remove('active')
-      }
-    });
-    this.classList.toggle("active");
-
-    let panel = this.nextElementSibling;
-    allProjectAccordPanels.forEach(accP => {
-      if (accP !== panel) {
-        accP.style.maxHeight = null;
-      }
-    });
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-});
-
-// By default first accordian click
-allProjectAccordTitles[0].click();
 
 
 /* ------------------------------------------------------------------ */
@@ -99,40 +125,3 @@ const selectCertificateTab = (btnEl, slNo) => {
 // By default first tab button click
 allTabBtns[0].click();
 
-
-
-
-
-
-/* ------------------------------------------------------------------ */
-/*                          MODAL                              */
-/* ------------------------------------------------------------------ */
-
-// Modal Container
-const modal = document.querySelector(".modal");
-
-// Modal Content Image
-const modalContentImg = document.querySelector(".modal-content-img");
-
-// All Image elements of the portfolio
-const allImgs = document.querySelectorAll("img");
-allImgs.forEach(img => {
-  // Click event for any image
-  img.onclick = function () {
-    modal.style.display = "flex";
-    modalContentImg.src = this.src;
-  }
-});
-
-
-// Modal close icon
-const modalCloseIcon = document.querySelector(".close");
-
-// Click event for close icon
-modalCloseIcon.onclick = function () {
-  modal.style.animation = "zoomOut 0.5s ease"
-  setTimeout(() => {
-    modal.style.display = "none";
-    modal.style.animation = ""
-  }, 500);
-}

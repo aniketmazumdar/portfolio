@@ -359,54 +359,72 @@ a {
 
 
 /* ----------------------------------------------------------- */
-/*                           ACCORDIAN                         */
+/*                           ACCORDION                         */
 /* ----------------------------------------------------------- */
-.accordion-title {
+.accordion {
+    background-color: var(--THEME-COLOR);
+    color: var(--LIGHT-CONTENT-COLOR);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: var(--BOX-SHADOW-TRANSITION);
+}
+
+.accordion:first-child {
+    margin-top: 0;
+}
+
+.accordion:last-child {
+    margin-bottom: 0;
+}
+
+.accordion:hover,
+.accordion:focus,
+.accordion.active {
+    box-shadow: var(--LIGHT-BOX-SHADOW);
+    transition: var(--BOX-SHADOW-TRANSITION);
+}
+
+.accordion .accordion-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--THEME-COLOR);
-    color: var(--LIGHT-CONTENT-COLOR);
-    cursor: pointer;
     border: none;
     transition: var(--CONTENT-SHADOW-TRANSITION);
 }
 
-.accordion-title:hover {
-    text-shadow: var(--LIGHT-CONTENT-SHADOW);
-    transition: var(--CONTENT-SHADOW-TRANSITION);
-}
-
-.accordion-title.active,
-.accordion-title:hover {
-    background-color: var(--THEME-COLOR);
-}
-
-.accordion-title:after {
+.accordion .accordion-title:after {
     content: '\002B';
-    color: var(--LIGHT-CONTENT-COLOR);
     font-weight: bold;
     float: right;
 }
 
-.accordion-title.active:after {
+.accordion.active .accordion-title:after {
     content: "\2212";
 }
 
-/* XL -> M */
-.accordion-panel {
+.accordion .accordion-panel {
     max-height: 0;
-    margin: 0.5rem 0 3rem;
     overflow: hidden;
-    background-color: var(--THEME-COLOR);
     transition: var(--MAXHEIGHT-TRANSITION);
-    border: none;
+}
+
+.accordion.active .accordion-panel {
+    margin-top: 1.5rem;
 }
 
 /* S -> XS */
 @media screen and (max-device-width: 768px) {
-    .accordion-panel {
-        margin: 0 0 3rem;
+    .accordion {
+        padding: 0;
+        margin: 3rem 0;
+    }
+
+    .accordion:hover,
+    .accordion:focus,
+    .accordion.active {
+        box-shadow: none;
     }
 }
 
@@ -900,10 +918,14 @@ body {
     margin-bottom: 3rem;
 }
 
+#skills .accordion.active .accordion-panel {
+    margin-top: 0;
+}
+
 /* Only for XL */
 #skills .skill-wrap {
     display: grid;
-    grid-template-columns: 20% calc(80% - 1rem);
+    grid-template-columns: 21% calc(79% - 1rem);
     gap: 1rem;
     align-items: center;
     margin: 1.25rem 0;
@@ -934,14 +956,14 @@ body {
 /* Only for L */
 @media screen and (max-device-width: 1200px) {
     #skills .skill-wrap {
-        grid-template-columns: 17% calc(83% - 1rem);
+        grid-template-columns: 18% calc(82% - 1rem)
     }
 }
 
 /* Only for M */
 @media screen and (max-device-width: 1024px) {
     #skills .skill-wrap {
-        grid-template-columns: 24% calc(76% - 1rem);
+        grid-template-columns: 25% calc(75% - 1rem);
     }
 }
 
@@ -1024,10 +1046,6 @@ body {
     align-items: center;
     width: 100%;
     margin-right: 2rem;
-}
-
-#projects .accordion-panel {
-    margin: 1rem 0 3rem;
 }
 
 #projects .technologies {
