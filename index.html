@@ -2,7 +2,7 @@
 <!-- 
     PROJECT:    Portfolio
     AUTHOR:     Aniket Mazumdar
-    VERSION:    2.9.3
+    VERSION:    2.9.4
 -->
 <html lang="en" dir="ltr">
 
@@ -27,11 +27,28 @@
 <body>
   <main>
     <div class="container">
+      <div class="sidebar-btn">
+        <a href="javascript:;" class="sidebar-right-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-compact-right"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+          </svg>
+        </a>
+        <a href="javascript:;" class="sidebar-left-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-compact-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z" />
+          </svg>
+        </a>
+      </div>
+
       <!-- SIDEBAR -->
       <div class="sidebar">
         <ul>
           <li>
-            <a class="sidebar-item" href="#">
+            <a class="sidebar-item text-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                 <path
                   d="M448 432c0-14.25 8.547-28.14 21.28-34.55l39.56-16.56l15.64-37.52c4.461-9.037 11.45-15.37 19.43-19.23L544 128c0-17.67-14.33-32-32-32s-32 14.33-32 32l-.0156 112c0 8.836-7.148 16-15.98 16s-16.07-7.164-16.07-16L448 64c0-17.67-14.33-32-32-32s-32 14.33-32 32l-.0635 176c0 8.836-7.106 16-15.94 16S351.9 248.8 351.9 240L352 32c0-17.67-14.33-32-32-32S288 14.33 288 32L287.9 240C287.9 248.8 280.8 256 272 256S255.9 248.8 255.9 240L256 64c0-17.67-14.33-32-32-32S192 46.33 192 64v279.4L132.3 283.7C124.5 275.9 114.2 272 104 272C82.68 272 64 289.2 64 312c0 10.23 3.906 20.47 11.72 28.28l113.1 113.1C226.6 491.2 276.9 512 330.3 512H368c42.72 0 81.91-15.32 112.4-40.73l-9.049-3.773C456.6 460.1 448 446.3 448 432zM349.8 371.6L320 383.1l-12.42 29.78C306.1 415 305.4 416 304 416s-2.969-.9941-3.578-2.219L288 383.1l-29.79-12.42C256.1 370.1 256 369.4 256 367.1c0-1.365 .9922-2.967 2.209-3.577L288 352l12.42-29.79C301 320.1 302.6 320 304 320s2.967 .9902 3.578 2.217L320 352l29.79 12.42C351 365 352 366.6 352 367.1C352 369.4 351 370.1 349.8 371.6zM80 224c2.277 0 4.943-1.656 5.959-3.699l20.7-49.63l49.65-20.71c2.027-1.014 3.682-3.696 3.686-5.958C159.1 141.7 158.3 139.1 156.3 138L106.7 117.4L85.96 67.7C84.94 65.65 82.28 64 80 64C77.72 64 75.05 65.65 74.04 67.7L53.34 117.3L3.695 138C1.668 139.1 .0117 141.7 .0078 143.1c.0039 2.262 1.662 4.953 3.688 5.967l49.57 20.67l20.77 49.67C75.05 222.3 77.72 224 80 224zM639.1 432c-.0039-2.275-1.657-4.952-3.687-5.968l-49.57-20.67l-20.77-49.67C564.9 353.7 562.3 352 560 352c-2.281 0-4.959 1.652-5.975 3.695l-20.7 49.63l-49.64 20.71c-2.027 1.016-3.682 3.683-3.686 5.958c.0039 2.262 1.661 4.954 3.686 5.968l49.57 20.67l20.77 49.67C555.1 510.3 557.7 512 560 512c2.277 0 4.933-1.656 5.949-3.699l20.7-49.63l49.65-20.71C638.3 436.9 639.1 434.3 639.1 432z" />
@@ -40,7 +57,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#summary">
+            <a class="sidebar-item text-link" href="#summary">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-exclamation-octagon-fill"
                 viewBox="0 0 16 16">
                 <path
@@ -50,7 +67,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#services">
+            <a class="sidebar-item text-link" href="#services">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
                 <path
                   d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
@@ -59,7 +76,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#skills">
+            <a class="sidebar-item text-link" href="#skills">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-lightbulb-fill"
                 viewBox="0 0 16 16">
                 <path
@@ -69,7 +86,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#experience">
+            <a class="sidebar-item text-link" href="#experience">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-briefcase-fill"
                 viewBox="0 0 16 16">
                 <path
@@ -81,7 +98,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#projects">
+            <a class="sidebar-item text-link" href="#projects">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-laptop-fill" viewBox="0 0 16 16">
                 <path
                   d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
@@ -90,7 +107,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#education">
+            <a class="sidebar-item text-link" href="#education">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                 <path
                   d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z" />
@@ -99,7 +116,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#certificates">
+            <a class="sidebar-item text-link" href="#certificates">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
                 <path
                   d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
@@ -109,7 +126,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#about-me">
+            <a class="sidebar-item text-link" href="#about-me">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle-fill"
                 viewBox="0 0 16 16">
                 <path
@@ -119,7 +136,7 @@
             </a>
           </li>
           <li>
-            <a class="sidebar-item" href="#get-in-touch">
+            <a class="sidebar-item text-link" href="#get-in-touch">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill"
                 viewBox="0 0 16 16">
                 <path
@@ -139,9 +156,9 @@
           <div class="section-content-wrapper">
             <div class="hello-wrap">
               <h1 class="hello">Hello I'm,</h1>
-              <div class="img-wrap">
+              <a href="javascript:;" class="img-wrap box-link">
                 <img src="assets/img/avatar.webp" alt="avatar" class="avatar">
-              </div>
+              </a>
             </div>
             <h2 class="name">Aniket Mazumdar</h2>
             <div class="identity">
@@ -164,7 +181,8 @@
                 all while ensuring impeccable <span class="highlight">accessibility standards</span>. My skill set spans
                 a wide range of technologies, including: <span class="highlight">HTML, CSS, Sass, Bootstrap, JavaScript,
                   TypeScript, jQuery, React JS, Redux, Accessibility, Storybook, RTL, Jest, GraphQL, Git, Jira</span>
-                and <a href="#skills" class="highlight">many more</a>. I'm specialized in <span class="highlight">React
+                and <a href="#skills" class="highlight text-link">many more</a>. I'm specialized in <span
+                  class="highlight">React
                   JS based web app</span> development and design.
               </p>
 
@@ -190,7 +208,7 @@
             </div>
 
             <div class="cv-wrap">
-              <a href="assets/doc/CV.pdf" download="CV - Aniket Mazumdar" target="_blank" class="btn btn-light"
+              <a href="assets/doc/CV.pdf" download="CV - Aniket Mazumdar" target="_blank" class="btn btn-light box-link"
                 aria-label="Download Resume (PDF)">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-down"
                   viewBox="0 0 16 16">
@@ -388,7 +406,7 @@
             </p>
 
             <ul>
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Frontend</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -590,7 +608,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Test Case</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -627,7 +645,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Backend</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -679,7 +697,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Database</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -716,7 +734,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Data Fetching</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -738,7 +756,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Version Control</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -760,7 +778,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <h5 class="accordion-title">Project Management Tool</h5>
                 <div class="accordion-panel">
                   <ul>
@@ -796,9 +814,9 @@
               </li>
 
               <li class="experience-item">
-                <img src="assets/img/brand/publicis-sapient.webp" alt="Publicis Sapient">
+                <img src="assets/img/brand/publicis-sapient.webp" alt="Publicis Sapient" class="box-link">
                 <div class="info-wrap">
-                  <a href="https://www.publicissapient.com/" target="_blank">
+                  <a href="https://www.publicissapient.com/" target="_blank" class="text-link">
                     <h5 class="brand">Publicis Sapient</h5>
                   </a>
                   <div>
@@ -812,9 +830,9 @@
               </li>
 
               <li class="experience-item">
-                <img src="assets/img/brand/codeclouds.webp" alt="CodeClouds IT Solutions Pvt. Ltd">
+                <img src="assets/img/brand/codeclouds.webp" alt="CodeClouds IT Solutions Pvt. Ltd" class="box-link">
                 <div class="info-wrap">
-                  <a href="https://www.codeclouds.com/" target="_blank">
+                  <a href="https://www.codeclouds.com/" target="_blank" class="text-link">
                     <h5 class="brand">CodeClouds IT Solutions Pvt. Ltd</h5>
                   </a>
                   <h6 class="designation">Web Developer</h6>
@@ -826,9 +844,9 @@
               </li>
 
               <li class="experience-item">
-                <img src="assets/img/brand/nat-it.webp" alt="Nat IT Solved Pvt. Ltd">
+                <img src="assets/img/brand/nat-it.webp" alt="Nat IT Solved Pvt. Ltd" class="box-link">
                 <div class="info-wrap">
-                  <a href="https://www.cbnits.com/" target="_blank">
+                  <a href="https://www.cbnits.com/" target="_blank" class="text-link">
                     <h5 class="brand">Nat IT Solved Pvt. Ltd</h5>
                   </a>
                   <h6 class="designation">Programme Analyst</h6>
@@ -840,9 +858,9 @@
               </li>
 
               <li class="experience-item">
-                <img src="assets/img/brand/weborbit.webp" alt="Weborbit Solutions Pvt. Ltd">
+                <img src="assets/img/brand/weborbit.webp" alt="Weborbit Solutions Pvt. Ltd" class="box-link">
                 <div class="info-wrap">
-                  <a href="javascript:;">
+                  <a href="javascript:;" class="text-link">
                     <h5 class="brand">Weborbit Solutions Pvt. Ltd</h5>
                   </a>
                   <h6 class="designation">Jr. Web Developer</h6>
@@ -862,7 +880,7 @@
           <h4 class="section-title">Projects</h4>
           <div class="section-content-wrapper">
             <ul>
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>Car Advisory</h5>
@@ -889,7 +907,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>MGP Digital Booking</h5>
@@ -912,7 +930,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>Unify CMS</h5>
@@ -934,7 +952,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>Unify Hub</h5>
@@ -959,7 +977,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>Unify Checkout</h5>
@@ -981,7 +999,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>Unify Checkout</h5>
@@ -1003,7 +1021,7 @@
                 </div>
               </li>
 
-              <li class="accordion" onclick="accordionClickHandler(this)">
+              <li class="accordion box-link" onclick="accordionClickHandler(this)">
                 <div class="accordion-title">
                   <div class="heading">
                     <h5>Luxury London</h5>
@@ -1050,7 +1068,7 @@
 
               <li class="education-item">
                 <h5>Bachelor of Technology in Information Technology</h5>
-                <a href="https://makautwb.ac.in/" target="_blank">
+                <a href="https://makautwb.ac.in/" target="_blank" class="text-link">
                   <h6 class="university">Maulana Abul Kalam Azad University of Technology</h6>
                 </a>
                 <p class="score">Scored 7.64 DGPA</p>
@@ -1062,7 +1080,7 @@
 
               <li class="education-item">
                 <h5>Higher Secondary in Science</h5>
-                <a href="https://wbchse.wb.gov.in/" target="_blank">
+                <a href="https://wbchse.wb.gov.in/" target="_blank" class="text-link">
                   <h6 class="university">West Bengal Council of Higher Secondary Education</h6>
                 </a>
                 <p class="score">Scored 71.40 % marks</p>
@@ -1074,7 +1092,7 @@
 
               <li class="education-item">
                 <h5>Secondary</h5>
-                <a href="https://wbbse.wb.gov.in/" target="_blank">
+                <a href="https://wbbse.wb.gov.in/" target="_blank" class="text-link">
                   <h6 class="university">West Bengal Board Of Secondary Education</h6>
                 </a>
                 <p class="score">Scored 81.75% marks</p>
@@ -1097,7 +1115,8 @@
             <div class="tab-container">
               <ul class="tab-btn-groups">
                 <li>
-                  <button class="tab-btn tab-btn-dark tab-btn-certificate" onclick="selectCertificateTab(this, 0)">
+                  <button class="tab-btn tab-btn-dark tab-btn-certificate text-link"
+                    onclick="selectCertificateTab(this, 0)">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trophy-fill"
                       viewBox="0 0 16 16">
                       <path
@@ -1108,7 +1127,8 @@
                 </li>
 
                 <li>
-                  <button class="tab-btn tab-btn-dark tab-btn-certificate" onclick="selectCertificateTab(this, 1)">
+                  <button class="tab-btn tab-btn-dark tab-btn-certificate text-link"
+                    onclick="selectCertificateTab(this, 1)">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                       <path
                         d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z" />
@@ -1124,8 +1144,8 @@
                     <li>
                       <a href="javascript:;">
                         <img src="assets/img/certificates/recognition-racv.webp"
-                          alt="image for UI Developer certificate" id="myImg">
-                        <h5 class="title">UI Developer</h5>
+                          alt="image for UI Developer certificate" id="myImg" class="box-link">
+                        <h5 class="title text-link">UI Developer</h5>
                       </a>
                       <h6 class="caption issuer">RACV</h6>
                       <p class="caption">Sep 2023</p>
@@ -1138,8 +1158,8 @@
                     <li>
                       <a href="https://udemy.com/certificate/UC-14e44112-9acc-4ae1-8233-acf95ecf7b4b/" target="_blank">
                         <img src="assets/img/certificates/using-typescript-with-react.webp"
-                          alt="image for TypeScript with React">
-                        <h5 class="title">Using TypeScript with React</h5>
+                          alt="image for TypeScript with React" class="box-link">
+                        <h5 class="title text-link">Using TypeScript with React</h5>
                       </a>
                       <h6 class="caption issuer">Udemy</h6>
                       <p class="caption">Sep 2023</p>
@@ -1149,8 +1169,8 @@
                       <a href="https://www.udemy.com/certificate/UC-5543a4cb-c389-4b3b-9d9f-239274aa8618"
                         target="_blank">
                         <img src="assets/img/certificates/react-the-complete-guide.webp"
-                          alt="image for React The Complete Guide">
-                        <h5 class="title">React - The Complete Guide (incl Hooks, React Router, Redux)</h5>
+                          alt="image for React The Complete Guide" class="box-link">
+                        <h5 class="title text-link">React - The Complete Guide (incl Hooks, React Router, Redux)</h5>
                       </a>
                       <h6 class="caption issuer">Udemy</h6>
                       <p class="caption">Jul 2021</p>
@@ -1159,8 +1179,8 @@
                     <li>
                       <a href="https://udemy.com/certificate/UC-053b6041-7b75-4045-a5f9-10252b6d70b2/" target="_blank">
                         <img src="assets/img/certificates/react-testing-library-and-jest.webp"
-                          alt="image for React Testing Library and Jest The Complete Guide">
-                        <h5 class="title">React Testing Library and Jest: The Complete Guide</h5>
+                          alt="image for React Testing Library and Jest The Complete Guide" class="box-link">
+                        <h5 class="title text-link">React Testing Library and Jest: The Complete Guide</h5>
                       </a>
                       <h6 class="caption issuer">Udemy</h6>
                       <p class="caption">Sep 2023</p>
@@ -1170,8 +1190,8 @@
                       <a href="https://www.udemy.com/certificate/UC-d38a196c-66ed-4a36-a3f0-c8537fe58712/"
                         target="_blank">
                         <img src="assets/img/certificates/next-js-and-react-the-complete-guide.webp"
-                          alt="image for Next.js & React The Complete Guide">
-                        <h5 class="title">Next.js & React - The Complete Guide</h5>
+                          alt="image for Next.js & React The Complete Guide" class="box-link">
+                        <h5 class="title text-link">Next.js & React - The Complete Guide</h5>
                       </a>
                       <h6 class="caption issuer">Udemy</h6>
                       <p class="caption">Apr 2023</p>
@@ -1181,8 +1201,8 @@
                       <a href="https://www.udemy.com/certificate/UC-5cb81a9b-9aa6-4071-b62a-cdc83816d286/"
                         target="_blank">
                         <img src="assets/img/certificates/introduction-to-ux-design-for-accessibility-and-wcag.webp"
-                          alt="image for UX Design for Accessibility and WCAG 2.0">
-                        <h5 class="title">Introduction to UX Design for Accessibility and WCAG 2.0</h5>
+                          alt="image for UX Design for Accessibility and WCAG 2.0" class="box-link">
+                        <h5 class="title text-link">Introduction to UX Design for Accessibility and WCAG 2.0</h5>
                       </a>
                       <h6 class="caption issuer">Udemy</h6>
                       <p class="caption">Apr 2023</p>
@@ -1192,8 +1212,8 @@
                       <a href="https://www.udemy.com/certificate/UC-8af203cf-4df9-4707-b78f-30880ac77493/"
                         target="_blank">
                         <img src="assets/img/certificates/creating-accessible-websites.webp"
-                          alt="image for Accessible Websites Creating">
-                        <h5 class="title">Creating Accessible Websites</h5>
+                          alt="image for Accessible Websites Creating" class="box-link">
+                        <h5 class="title text-link">Creating Accessible Websites</h5>
                       </a>
                       <h6 class="caption issuer">Udemy</h6>
                       <p class="caption">Apr 2023</p>
@@ -1203,8 +1223,8 @@
                       <a href="https://www.apollographql.com/tutorials/certifications/a8421def-419d-46c6-85a5-7916477afb8b"
                         target="_blank">
                         <img src="assets/img/certificates/apollo-associate-graphql-developer.webp"
-                          alt="image for Graph Developer Associate">
-                        <h5 class="title">Graph Developer - Associate</h5>
+                          alt="image for Graph Developer Associate" class="box-link">
+                        <h5 class="title text-link">Graph Developer - Associate</h5>
                       </a>
                       <h6 class="caption issuer">Apollo GraphQL</h6>
                       <p class="caption">Sep 2023</p>
@@ -1268,7 +1288,7 @@
 
             <ul class="contacts">
               <li>
-                <a href="tel:+917602999141">
+                <a href="tel:+917602999141" class="text-link">
                   <span>(+91) 76029 99141</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone-fill svg-phone"
                     viewBox="0 0 16 16">
@@ -1280,7 +1300,7 @@
               </li>
 
               <li>
-                <a href="mailto:aniketmazumdar1994@gmail.com">
+                <a href="mailto:aniketmazumdar1994@gmail.com" class="text-link">
                   <span>aniketmazumdar1994@gmail.com</span>
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     zoomAndPan="magnify" viewBox="0 0 30 30.000001" preserveAspectRatio="xMidYMid meet" version="1.0">
@@ -1301,7 +1321,7 @@
               </li>
 
               <li>
-                <a href="javascript:void">
+                <a href="javascript:void" class="text-link">
                   <address>
                     Nirole, Purba Bardhhaman, India, 713140
                   </address>
@@ -1324,7 +1344,8 @@
             <div class="social-networks-wrap">
               <ul class="social-networks">
                 <li>
-                  <a href="mailto:aniketmazumdar1994@outlook.com" aria-label="Outlook Mail: Aniket Mazumdar">
+                  <a href="mailto:aniketmazumdar1994@outlook.com" aria-label="Outlook Mail: Aniket Mazumdar"
+                    class="box-link">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                       zoomAndPan="magnify" viewBox="0 0 30 30.000001" preserveAspectRatio="xMidYMid meet" version="1.0"
                       class="svg-outlook">
@@ -1353,7 +1374,7 @@
                 </li>
                 <li>
                   <a href="https://www.linkedin.com/in/aniket-mazumdar/" target="_blank"
-                    aria-label="https://www.linkedin.com/in/aniket-mazumdar/">
+                    aria-label="https://www.linkedin.com/in/aniket-mazumdar/" class="box-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                       <path
                         d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
@@ -1363,7 +1384,7 @@
                 </li>
                 <li>
                   <a href="https://github.com/aniketmazumdar" target="_blank"
-                    aria-label="https://github.com/aniketmazumdar">
+                    aria-label="https://github.com/aniketmazumdar" class="box-link" class="box-link">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github"
                       viewBox="0 0 16 16">
                       <path
@@ -1373,8 +1394,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/kid93s" target="_blank"
-                    aria-label="https://www.facebook.com/kid93s">
+                  <a href="https://www.facebook.com/kid93s" target="_blank" aria-label="https://www.facebook.com/kid93s"
+                    class="box-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                       <path
                         d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
@@ -1384,7 +1405,7 @@
                 </li>
                 <li>
                   <a href="https://www.instagram.com/kid93s/" target="_blank"
-                    aria-label="https://www.instagram.com/kid93s/">
+                    aria-label="https://www.instagram.com/kid93s/" class="box-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="svg-instagram">
                       <rect width="256" height="256" fill="none"></rect>
                       <circle cx="128" cy="128" r="32"></circle>
@@ -1396,7 +1417,7 @@
                 </li>
                 <li>
                   <a href="https://www.youtube.com/@aniketmazumdar" target="_blank"
-                    aria-label="https://www.youtube.com/@aniketmazumdar">
+                    aria-label="https://www.youtube.com/@aniketmazumdar" class="box-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                       class="bi bi-youtube" viewBox="0 0 16 16">
                       <path
@@ -1409,7 +1430,7 @@
             </div>
 
             <div class="copyright-text">
-              <span>v2.9.3 &copy; 2023</span>
+              <span>v2.9.4 &copy; 2023</span>
             </div>
           </div>
         </section><!-- GET IN TOUCH -->

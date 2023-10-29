@@ -1,7 +1,7 @@
 <!-- HEADING -->
 <div align="center">
 <h1 align="center">My Portfolio</h1>
-<h6 align="center">(v2.9.3)</h6>
+  <p align="center"><strong>(v2.9.4)</strong></p>
   <p align="center">
     A static responsive single-page portfolio
     <br />
@@ -25,34 +25,34 @@ This is a static responsive single-page portfolio. This portfolio contains below
   <summary>Sections</summary>
   <ol>
     <li>
-      <a href="#">Welcome</a>
+      <a href="https://aniketmazumdar.vercel.app">Welcome</a>
     </li>
     <li>
-      <a href="#">Summary</a>
+      <a href="https://aniketmazumdar.vercel.app/#summary">Summary</a>
     </li>
     <li>
-      <a href="#">Services</a>
+      <a href="https://aniketmazumdar.vercel.app/#services">Services</a>
     </li>
     <li>
-      <a href="#">Skills</a>
+      <a href="https://aniketmazumdar.vercel.app/#skills">Skills</a>
     </li>
     <li>
-      <a href="#">Experience</a>
+      <a href="https://aniketmazumdar.vercel.app/#experience">Experience</a>
     </li>
     <li>
-      <a href="#">Projects</a>
+      <a href="https://aniketmazumdar.vercel.app/#projects">Projects</a>
     </li>
     <li>
-      <a href="#">Education</a>
+      <a href="https://aniketmazumdar.vercel.app/#education">Education</a>
     </li>
     <li>
-      <a href="#">Certificates</a>
+      <a href="https://aniketmazumdar.vercel.app/#certificates">Certificates</a>
     </li>
     <li>
-      <a href="#">About Me</a>
+      <a href="https://aniketmazumdar.vercel.app/#about-me">About Me</a>
     </li>
     <li>
-      <a href="#">Get in Touch</a>
+      <a href="https://aniketmazumdar.vercel.app/#get-in-touch">Get in Touch</a>
     </li>
   </ol>
 </details>

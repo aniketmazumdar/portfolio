@@ -81,6 +81,45 @@ const accordionClickHandler = (accordianEl, atPageLoad = false) => {
 
 
 /* ------------------------------------------------------------------ */
+/*                               SIDEBAR                              */
+/* ------------------------------------------------------------------ */
+
+// Definition of Sidebar Toggle
+const sidebarToggle = () => {
+  const btnEl = document.querySelector(".sidebar-btn");
+  const sidebarEl = document.querySelector(".sidebar");
+  const sidebarItemEls = document.querySelectorAll(".sidebar-item");
+  const bodyContainerEl = document.querySelector(".body-container");
+
+
+  // Sidebar Btn click method
+  btnEl.addEventListener("click", function () {
+    btnEl.classList.toggle("active");
+    sidebarEl.classList.toggle("active");
+  });
+
+  // Sidebar Item click method
+  sidebarItemEls.forEach(sIElm => {
+    sIElm.addEventListener("click", function () {
+      btnEl.classList.remove("active");
+      sidebarEl.classList.remove("active");
+    });
+  });
+
+  // Body Container click method
+  bodyContainerEl.addEventListener("click", function () {
+    btnEl.classList.remove("active");
+    sidebarEl.classList.remove("active");
+  });
+};
+
+sidebarToggle();
+
+
+
+
+
+/* ------------------------------------------------------------------ */
 /*                              SKILLS                                */
 /* ------------------------------------------------------------------ */
 // All Skill Accordions
