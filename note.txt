@@ -1,0 +1,27 @@
+To do
+-----------------------------
+WELCOME
+    Show "JavaScript UI Developer" and "7 years experience" as button
+    Show Introvert | Visionary | Optimistic | Humorous | Materialistic | Egalitarian | Bibliophile | Melophile
+
+
+Experience
+    Show items as accordian and add experience details as content
+
+
+Certificates 
+    Split into two tabs: Trainings & Courses
+    Show Training items as accordian. iQuester & NIVT.
+    Remove recognition tab
+
+
+TESTIMONIAL (New Section)
+    Split into two tabs: Recommendation & Recognition
+    In Recognition tab show the recognition content of Certificates
+    Show in carousel
+
+
+GALLERY (New Section)
+    Show two tabs: My Life and Photography
+    My Life:
+        should categories in accordian. like- College, Familiy, Office, Trip, Picnic, Durga Puja

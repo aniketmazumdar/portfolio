@@ -1,7 +1,7 @@
 <!-- HEADING -->
 <div align="center">
 <h1 align="center">My Portfolio</h1>
-  <p align="center"><strong>(v2.9.4)</strong></p>
+  <p align="center"><strong>(v2.9.5)</strong></p>
   <p align="center">
     A static responsive single-page portfolio
     <br />

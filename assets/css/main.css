@@ -83,8 +83,13 @@
     --BOX-SHADOW-TRANSITION: box-shadow 0.5s ease;
     --MAXHEIGHT-TRANSITION: max-height 0.5s ease;
     --COLOR-TRANSITION: color 0.5s ease;
-    --ZOOMIN-ANIMATION: zoomIn 0.5s ease;
     --LEFT-TRANSITION: left 0.5s ease;
+
+    --ZOOMIN-ANIMATION: zoomIn 0.5s ease;
+    --CONTENT-SHADOW-BLINK-ANIMATION: contentShadowBlink 4s infinite;
+    --BOX-SHADOW-BLINK-ANIMATION: boxShadowBlink 4s infinite;
+    --ARROW-LTOR-TRANSITION-ANIMATION: arrowLtoRTransition 4s infinite;
+    --ARROW-RTOL-TRANSITION-ANIMATION: arrowRtoLTransition 4s infinite;
 }
 
 
@@ -116,7 +121,7 @@
     --LIGHT-SHADOW-COLOR: var(--LIGHT-GREY-2-COLOR);
 
     --LIGHT-CONTENT-SHADOW: 7px 7px 5px var(--LIGHT-SHADOW-COLOR);
-    --LIGHT-BOX-SHADOW: 5px 5px 10px var(--LIGHT-SHADOW-COLOR);
+    --LIGHT-BOX-SHADOW: 7px 7px 10px var(--LIGHT-SHADOW-COLOR);
 
     --SECTION-CONTAINER-INNER-HEIGHT: calc(100vh - var(--CONTAINER-PADDING)*2);
 }
@@ -222,6 +227,54 @@
     }
 }
 
+@keyframes contentShadowBlink {
+    50% {
+        text-shadow: var(--LIGHT-CONTENT-SHADOW);
+    }
+}
+
+@keyframes boxShadowBlink {
+    50% {
+        box-shadow: var(--LIGHT-BOX-SHADOW);
+    }
+}
+
+@keyframes arrowLtoRTransition {
+    0% {
+        left: -1rem;
+    }
+    20% {
+        left: 1rem;
+    }
+    30% {
+        left: .75rem;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes arrowRtoLTransition {
+    0% {
+        left: 2.5rem;
+    }
+    20% {
+        left: 0.5rem;
+    }
+    30% {
+        left: .75rem;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 
 /* ----------------------------------------------------------- */
@@ -253,37 +306,25 @@ a {
 }
 
 .text-link {
-    transition: var(--CONTENT-SHADOW-TRANSITION);
+    animation: var(--CONTENT-SHADOW-BLINK-ANIMATION);
 }
 
 .box-link {
-    transition: var(--BOX-SHADOW-TRANSITION);
+    animation: var(--BOX-SHADOW-BLINK-ANIMATION);
 }
 
 .text-link:hover,
 .text-link:focus,
 .text-link.active {
     text-shadow: var(--LIGHT-CONTENT-SHADOW);
-    transition: var(--CONTENT-SHADOW-TRANSITION);
 }
 
 .box-link:hover,
 .box-link:focus,
 .box-link.active {
     box-shadow: var(--LIGHT-BOX-SHADOW);
-    transition: var(--BOX-SHADOW-TRANSITION);
 }
 
-/* Only for S */
-@media screen and (max-device-width: 768px) {
-    .text-link {
-        text-shadow: var(--LIGHT-CONTENT-SHADOW);
-    }
-
-    .box-link {
-        box-shadow: var(--LIGHT-BOX-SHADOW);
-    }
-}
 
 
 /* ----------------------------------------------------------- */
@@ -434,13 +475,6 @@ a {
     .accordion {
         padding: 1rem;
         margin: 2rem 0;
-    }
-}
-
-/* Only for XS */
-@media screen and (max-device-width: 480px) {
-    .accordion {
-        padding: 0.5rem;
     }
 }
 
@@ -620,10 +654,12 @@ body {
 .sidebar-btn .sidebar-right-arrow {
     color: var(--BLACK-COLOR);
     font-weight: bold;
+    animation: var(--ARROW-LTOR-TRANSITION-ANIMATION);
 }
 
 .sidebar-btn .sidebar-left-arrow {
     color: var(--THEME-COLOR);
+    animation: var(--ARROW-RTOL-TRANSITION-ANIMATION);
 }
 
 .sidebar-btn .sidebar-right-arrow,
