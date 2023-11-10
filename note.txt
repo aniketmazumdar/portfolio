@@ -1,10 +1,5 @@
 To do
 -----------------------------
-WELCOME
-    Show "JavaScript UI Developer" and "7 years experience" as button
-    Show Introvert | Visionary | Optimistic | Humorous | Materialistic | Egalitarian | Bibliophile | Melophile
-
-
 Experience
     Show items as accordian and add experience details as content
 

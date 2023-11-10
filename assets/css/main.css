@@ -29,7 +29,7 @@
     --MONOSPACE-FONT: monospace;
     --KALAM-FONT: 'Kalam', cursive;
 
-    --H1-FONTSIZE-XL: 3rem;
+    --H1-FONTSIZE-XL: 2.5rem;
     --H1-FONTSIZE-S: 2rem;
     --H1-FONTSIZE-XS: 1.75rem;
     --H2-FONTSIZE-XL: 6rem;
@@ -57,6 +57,7 @@
     --CONTENT-FONTSIZE-S: 1.25rem;
     --COPYRIGHT-FONTSIZE: 1rem;
     --BUTTON-FONTSIZE: 1rem;
+    --BADGE-FONTSIZE: 1rem;
     --PROGRESS-FONTSIZE-XL: 1rem;
     --PROGRESS-FONTSIZE-XS: 0.75rem;
 
@@ -106,6 +107,7 @@
     --CAPTION-FONTFAMILY: var(--KALAM-FONT);
     --CONTENT-FONTFAMILY: var(--KALAM-FONT);
     --BUTTON-FONTFAMILY: var(--AUDIOWIDE-FONT);
+    --BADGE-FONTFAMILY: var(--AUDIOWIDE-FONT);
     --COPYRIGHT-FONTFAMILY: var(--MONOSPACE-FONT);
 
     --THEME-COLOR: var(--NAVY-COLOR);
@@ -243,15 +245,19 @@
     0% {
         left: -1rem;
     }
+
     20% {
         left: 1rem;
     }
+
     30% {
         left: .75rem;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -261,15 +267,19 @@
     0% {
         left: 2.5rem;
     }
+
     20% {
         left: 0.5rem;
     }
+
     30% {
         left: .75rem;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -368,6 +378,19 @@ a {
     }
 }
 
+
+
+/* ----------------------------------------------------------- */
+/*                             BADGE                           */
+/* ----------------------------------------------------------- */
+.badge {
+    font-family: var(--BADGE-FONTFAMILY);
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: var(--BADGE-FONTSIZE);
+    color: var(--DARK-TITLE-COLOR);
+    background: var(--LIGHT-GREY-COLOR);
+}
 
 
 /* ----------------------------------------------------------- */
@@ -870,14 +893,14 @@ body {
 #welcome .img-wrap {
     background: var(--LIGHT-CARDBOX-BG-COLOR);
     border-radius: 1.5rem;
-    height: 12.5rem;
+    height: 12rem;
     overflow: hidden;
     cursor: pointer;
 }
 
 /* XL -> M */
 #welcome .img-wrap img.avatar {
-    height: 12.5rem;
+    height: 12rem;
     top: 1.25rem;
     position: relative;
 }
@@ -905,6 +928,13 @@ body {
     font-size: var(--H3-S-FONTSIZE);
 }
 
+#welcome .nature {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .5em;
+}
+
 /* M -> XS */
 @media screen and (max-device-width: 1024px) {
     #welcome .identity {
@@ -913,6 +943,12 @@ body {
 
     #welcome .identity .years {
         margin-top: 1rem;
+    }
+
+    #welcome .img-wrap,
+    #welcome .img-wrap img.avatar {
+        height: 10rem;
+        border-radius: 1rem;
     }
 }
 
@@ -928,6 +964,10 @@ body {
     #welcome .name {
         margin: 6rem 0 4rem 0;
     }
+
+    #welcome .nature {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Only for XS */
@@ -941,7 +981,13 @@ body {
         height: 6rem;
         top: 0.5rem;
     }
+
+    #welcome .nature {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+
 
 
 
