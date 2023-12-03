@@ -1657,7 +1657,7 @@ body {
 #get-in-touch .contacts svg {
     fill: var(--CONTENT-COLOR);
     height: 1.5rem;
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #get-in-touch .svg-phone {
