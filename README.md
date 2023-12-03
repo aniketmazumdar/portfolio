@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Screenshot][screenshot-welcome]](https://aniketmazumdar.vercel.app)
+[![Screenshot][screenshot]](https://aniketmazumdar.vercel.app)
 
 This is a static responsive single-page portfolio. This portfolio contains below sections:
 
@@ -80,4 +80,4 @@ This section should list any major frameworks/libraries used to bootstrap your p
 [HTML5]: https://img.shields.io/badge/html5-white?style=for-the-badge&logo=html5&logoColor=default
 [CSS3]: https://img.shields.io/badge/css3-white?style=for-the-badge&logo=css3&logoColor=default
 [JavaScript]: https://img.shields.io/badge/JavaScript-white?style=for-the-badge&logo=JavaScript&logoColor=default
-[screenshot-welcome]: /assets/img/screenshots/welcome.png?raw=true
+[screenshot]: /assets/img/screenshots/screenshot.png?raw=true
