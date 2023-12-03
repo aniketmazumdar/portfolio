@@ -1,7 +1,7 @@
 <!-- HEADING -->
 <div align="center">
 <h1 align="center">My Portfolio</h1>
-  <p align="center"><strong>(v2.9.6)</strong></p>
+  <p align="center"><strong>(v3.0.0)</strong></p>
   <p align="center">
     A static responsive single-page portfolio
     <br />
@@ -31,6 +31,9 @@ This is a static responsive single-page portfolio. This portfolio contains below
       <a href="https://aniketmazumdar.vercel.app/#summary">Summary</a>
     </li>
     <li>
+      <a href="https://aniketmazumdar.vercel.app/#about-me">About Me</a>
+    </li>
+    <li>
       <a href="https://aniketmazumdar.vercel.app/#services">Services</a>
     </li>
     <li>
@@ -40,16 +43,19 @@ This is a static responsive single-page portfolio. This portfolio contains below
       <a href="https://aniketmazumdar.vercel.app/#experience">Experience</a>
     </li>
     <li>
-      <a href="https://aniketmazumdar.vercel.app/#projects">Projects</a>
-    </li>
-    <li>
       <a href="https://aniketmazumdar.vercel.app/#education">Education</a>
     </li>
     <li>
       <a href="https://aniketmazumdar.vercel.app/#certificates">Certificates</a>
     </li>
     <li>
-      <a href="https://aniketmazumdar.vercel.app/#about-me">About Me</a>
+      <a href="https://aniketmazumdar.vercel.app/#projects">Projects</a>
+    </li>
+    <li>
+      <a href="https://aniketmazumdar.vercel.app/#testimonials">Testimonials</a>
+    </li>
+    <li>
+      <a href="https://aniketmazumdar.vercel.app/#gallery">Gallery</a>
     </li>
     <li>
       <a href="https://aniketmazumdar.vercel.app/#get-in-touch">Get in Touch</a>
@@ -68,26 +74,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * ![HTML5][HTML5]
 * ![CSS3][CSS3]
 * ![JavaScript][JavaScript]
-
-<br/><br/>
-
-
-
-<!-- GALLERY -->
-### Gallery
-<div style="float:left">
-<img src="/assets/img/screenshots/summary.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/services.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/skills.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/experience.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/projects.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/education.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/certificates.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/about-me.png?raw=true" width="32.5%" height="150">
-<img src="/assets/img/screenshots/get-in-touch.png?raw=true" width="32.5%" height="150">
-</div>
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
