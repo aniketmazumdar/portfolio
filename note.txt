@@ -1,9 +1,5 @@
 To do
 -----------------------------
-Experience
-    Update experience details content
-
-
 TESTIMONIALS
     Slider: Animation
 
