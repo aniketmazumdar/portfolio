@@ -187,7 +187,7 @@ nextBtn.addEventListener('click', () => { changeSlide(1) });
 prevBtn.addEventListener('click', () => { changeSlide(-1) });
 
 // Auto slide movement in 10s
-setInterval(() => changeSlide(1), 10000);
+// setInterval(() => changeSlide(1), 30000);
 
 
 
