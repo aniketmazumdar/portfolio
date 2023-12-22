@@ -68,7 +68,7 @@
 
     --SUBTITLE-LINEHEIGHT: 2rem;
     --CAPTION-LINEHEIGHT: 2rem;
-    --SIDEBAR-LINEHEIGHT: 4rem;
+    --SIDEBAR-LINEHEIGHT: 3.75rem;
     --BUTTON-LINEHEIGHT: 1.5rem;
 
     --TAB-BTN-HEIGHT: 4rem;
@@ -150,7 +150,7 @@
     --H5-LINEHEIGHT: calc(var(--H5-FONTSIZE) + 0.5rem);
     --H6-LINEHEIGHT: calc(var(--H6-FONTSIZE) + 0.5rem);
     --TITLE-LINEHEIGHT: calc(var(--TITLE-FONTSIZE) + 0.5rem);
-    --CONTENT-LINEHEIGHT: calc(var(--CONTENT-FONTSIZE) + 1rem);
+    --CONTENT-LINEHEIGHT: calc(var(--CONTENT-FONTSIZE) + 1.5rem);
 
     --CONTENT-SHADOW: var(--CONTENT-SHADOW-SIZES) '';
     --TITLE-SHADOW: var(--TITLE-SHADOW-SIZES) '';
@@ -779,10 +779,10 @@ h6 {
 .subtitle {
     font-size: var(--SUBTITLE-FONTSIZE);
     line-height: var(--SUBTITLE-LINEHEIGHT);
+    font-family: var(--HEADING-FONTFAMILY);
 }
 
 .caption {
-    font-family: var(--CAPTION-FONTFAMILY);
     font-size: var(--CAPTION-FONTSIZE);
     line-height: var(--CAPTION-LINEHEIGHT);
     font-weight: lighter;
@@ -850,11 +850,6 @@ body {
     left: 0.75rem;
 }
 
-.sidebar-btn svg {
-    height: 2rem;
-    width: 2rem;
-}
-
 /* Only for XL */
 @media screen and (max-device-width: 1200px) {
     .sidebar-btn {
@@ -869,7 +864,6 @@ body {
     .sidebar-btn .sidebar-left-arrow,
     .sidebar-btn .sidebar-right-arrow,
     .sidebar-btn svg {
-        height: 1.5rem;
         width: 1.5rem;
     }
 }
@@ -1343,8 +1337,8 @@ body {
     margin-top: 1.25rem;
 }
 
-/* S -> XS */
-@media screen and (max-device-width: 768px) {
+/* M -> XS */
+@media screen and (max-device-width: 1024px) {
     #projects .heading {
         flex-direction: column;
         align-items: start;
@@ -1402,7 +1396,7 @@ body {
     justify-content: center;
 }
 
-#certificates .caption {
+#certificates .subtitle {
     margin-top: 1rem;
     font-weight: bold;
 }
@@ -1461,8 +1455,8 @@ body {
 }
 
 #testimonials .recogintion-groups .title,
-#testimonials .recogintion-groups .caption {
-    margin-top: 0.75rem;
+#testimonials .recogintion-groups .subtitle {
+    margin-top: 1rem;
     font-weight: bold;
 }
 
