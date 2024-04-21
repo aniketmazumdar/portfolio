@@ -1408,7 +1408,6 @@ img {
     height: 18rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     font-family: var(--SCRIPT-FONT-FAMILY);
 }
 
